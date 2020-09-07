@@ -1,4 +1,4 @@
-package com.igorwojda.client_sdk_android_tutorial_voice_phone_to_app_java;
+package com.vonage.phonetoapp;
 
 import android.os.Bundle;
 import android.view.View;
