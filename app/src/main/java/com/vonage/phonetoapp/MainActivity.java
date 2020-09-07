@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         client.setConnectionListener((connectionStatus, connectionStatusReason) -> runOnUiThread(() -> connectionStatusTextView.setText(connectionStatus.toString())));
 
         // login client
-        client.login("");
+        client.login("ALICE_TOKEN");
 
         // listen for incoming calls
         client.addIncomingCallListener(it -> {
