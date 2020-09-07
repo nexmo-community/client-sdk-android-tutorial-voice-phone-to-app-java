@@ -29,16 +29,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Request permission
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 123);
+        }
+
         // Retrieve views
         connectionStatusTextView = findViewById(R.id.connectionStatusTextView);
         answerCallButton = findViewById(R.id.answerCallButton);
         rejectCallButton = findViewById(R.id.rejectCallButton);
         endCallButton = findViewById(R.id.endCallButton);
-
-        // Request permission
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 123);
-        }
 
         // Init Nexmo client
         NexmoClient client = new NexmoClient.Builder().build(this);
