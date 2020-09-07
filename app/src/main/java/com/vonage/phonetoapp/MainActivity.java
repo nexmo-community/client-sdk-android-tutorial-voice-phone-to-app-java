@@ -1,11 +1,15 @@
 package com.vonage.phonetoapp;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import com.nexmo.client.NexmoCall;
 import com.nexmo.client.NexmoClient;
 
@@ -25,10 +29,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Retrieve views
         connectionStatusTextView = findViewById(R.id.connectionStatusTextView);
         answerCallButton = findViewById(R.id.answerCallButton);
         rejectCallButton = findViewById(R.id.rejectCallButton);
         endCallButton = findViewById(R.id.endCallButton);
+
+        // Request permission
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 123);
+        }
 
         // Init Nexmo client
         NexmoClient client = new NexmoClient.Builder().build(this);
