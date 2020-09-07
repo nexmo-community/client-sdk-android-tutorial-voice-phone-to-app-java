@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         rejectCallButton.setOnClickListener(view -> {
             incomingCall = false;
+            call = null;
             updateUI();
 
             call.hangup(null);
