@@ -1,5 +1,6 @@
 package com.vonage.phonetoapp;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,22 +9,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.nexmo.client.NexmoCall;
 import com.nexmo.client.NexmoClient;
 
+@SuppressLint("MissingPermission")
 public class MainActivity extends AppCompatActivity {
 
-    TextView connectionStatusTextView;
-    Button answerCallButton;
-    Button rejectCallButton;
-    Button endCallButton;
+    private TextView connectionStatusTextView;
+    private Button answerCallButton;
+    private Button rejectCallButton;
+    private Button endCallButton;
 
-    NexmoCall call;
-    Boolean incomingCall = false;
+    private NexmoCall call;
+    private Boolean incomingCall = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        connectionStatusTextView = findViewById(R.id.connectionStatus);
+        connectionStatusTextView = findViewById(R.id.connectionStatusTextView);
         answerCallButton = findViewById(R.id.answerCallButton);
         rejectCallButton = findViewById(R.id.rejectCallButton);
         endCallButton = findViewById(R.id.endCallButton);
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         client.setConnectionListener((connectionStatus, connectionStatusReason) -> runOnUiThread(() -> connectionStatusTextView.setText(connectionStatus.toString())));
 
         // login client
-        client.login("ALICE_TOKEN");
+        client.login("");
 
         // listen for incoming calls
         client.addIncomingCallListener(it -> {

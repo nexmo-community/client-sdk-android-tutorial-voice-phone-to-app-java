@@ -5,7 +5,7 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.vonage.client_sdk_android_tutorial_voice_phone_to_app_java"
+        applicationId "com.vonage.phonetoapp"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1

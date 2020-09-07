@@ -19,6 +19,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.vonage.client_sdk_android_tutorial_voice_phone_to_app_java", appContext.getPackageName());
+        assertEquals("com.vonage.phonetoapp", appContext.getPackageName());
     }
 }

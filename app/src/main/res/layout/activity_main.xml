@@ -7,7 +7,7 @@
         tools:context=".MainActivity">
 
     <TextView
-            android:id="@+id/connectionStatus"
+            android:id="@+id/connectionStatusTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
@@ -23,7 +23,7 @@
             android:layout_marginBottom="40dp"
             android:text="Answer"
             android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@id/connectionStatus"
+            app:layout_constraintBottom_toTopOf="@id/connectionStatusTextView"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/rejectCallButton"
             tools:visibility="visible" />
@@ -35,7 +35,7 @@
             android:layout_marginBottom="40dp"
             android:text="Reject"
             android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@id/connectionStatus"
+            app:layout_constraintBottom_toTopOf="@id/connectionStatusTextView"
             app:layout_constraintLeft_toRightOf="@+id/answerCallButton"
             app:layout_constraintRight_toRightOf="parent"
             tools:visibility="visible" />
@@ -47,7 +47,7 @@
             android:layout_marginBottom="40dp"
             android:text="End"
             android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@id/connectionStatus"
+            app:layout_constraintBottom_toTopOf="@id/connectionStatusTextView"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             tools:visibility="visible" />
