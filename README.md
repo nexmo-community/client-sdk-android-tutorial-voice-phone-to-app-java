@@ -1,1 +1,1 @@
-# ⚠️ This repository is no longer maintained. If you are looking for [phone to app voice call tutorial](https://developer.nexmo.com/client-sdk/tutorials/app-to-phone/introduction/kotlin) repository, please check [this repository](https://github.com/nexmo-community/client-sdk-tutorials).
+# ⚠️ This repository is no longer maintained. If you are looking for [phone to app voice call tutorial](https://developer.nexmo.com/client-sdk/tutorials/phone-to-app/introduction/java) repository, please check [this repository](https://github.com/nexmo-community/client-sdk-tutorials).
