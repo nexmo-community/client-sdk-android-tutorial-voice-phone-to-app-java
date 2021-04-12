@@ -1,3 +1,1 @@
-This repository is part of Android Client SDK [phone to app voice call tutorial](https://developer.nexmo.com/client-sdk/tutorials/phone-to-app/introduction/java).
-
-Kotlin version is avialable [here](https://github.com/nexmo-community/client-sdk-android-tutorial-voice-phone-to-app-kotlin).
+# ⚠️ This repository is no longer maintained. If you are looking for [phone to app voice call tutorial](https://developer.nexmo.com/client-sdk/tutorials/app-to-phone/introduction/kotlin) repository, please check [this repository](https://github.com/nexmo-community/client-sdk-tutorials).
